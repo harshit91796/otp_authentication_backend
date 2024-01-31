@@ -16,6 +16,10 @@ app.use(express.json());
 
 let OTP ,user;
 
+app.get("/", (req, res) => {
+  res.send("Hello World");
+})
+
 app.post("/loginOtp", async (req, res) =>{
    const phone = req.body.phoneNumber;
    console.log(phone);
